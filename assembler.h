@@ -22,16 +22,17 @@ private:
     int labelNumber;
     variable globalVariable[1000];
     int variableNumber;
-    int firstSearch();
-    int finalAssmemble();
+    int firstSearch(std::string);
+    int finalAssmemble(std::string);
 public:
     int *binaryProgram;
     int programLen;
 
     assembler();
     ~assembler();
+    int run(int,char**);
     int assemble(std::string);
-    void output(std::string);
+    std::string output();
 };
 
 #endif // ASSEMBLER_H
